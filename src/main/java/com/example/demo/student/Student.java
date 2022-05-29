@@ -1,4 +1,7 @@
-package student;
+/**
+ * 
+ */
+package com.example.demo.student;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -18,9 +21,9 @@ public class Student {
 
 	private Long id;
 	private String name;
-	private String emial;
+	private String email;
 	private Gender gender;
-	public Student() {
+	public Student(long id, String name, String email, Gender female) {
 		// TODO Auto-generated constructor stub
 	}
 	/**
@@ -32,9 +35,9 @@ public class Student {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(Long id) {
-		this.id = id;
-	}
+//	public void setId(Long id) {
+//		this.id = id;
+//	}
 	/**
 	 * @return the name
 	 */
@@ -44,21 +47,10 @@ public class Student {
 	/**
 	 * @param name the name to set
 	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-	/**
-	 * @return the emial
-	 */
-	public String getEmial() {
-		return emial;
-	}
-	/**
-	 * @param emial the emial to set
-	 */
-	public void setEmial(String emial) {
-		this.emial = emial;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+
 	/**
 	 * @return the gender
 	 */
@@ -68,8 +60,23 @@ public class Student {
 	/**
 	 * @param gender the gender to set
 	 */
-	public void setGender(Gender gender) {
-		this.gender = gender;
+//	public void setGender(Gender gender) {
+//		this.gender = gender;
+//	}
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
 	}
+	/**
+	 * @param email the email to set
+	 */
+//	public void setEmail(String email) {
+//		this.email = email;
+//	}
 
 }
+
+
+
