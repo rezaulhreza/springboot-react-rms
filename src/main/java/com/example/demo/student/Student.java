@@ -4,11 +4,13 @@
 package com.example.demo.student;
 
 import lombok.AllArgsConstructor;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @ToString
 @Getter
@@ -23,8 +25,15 @@ public class Student {
 	private String name;
 	private String email;
 	private Gender gender;
-	public Student(long id, String name, String email, Gender female) {
-		// TODO Auto-generated constructor stub
+	public Student(@JsonProperty("id") long id,
+			@JsonProperty("name") String name,
+			@JsonProperty("email") String email,
+			@JsonProperty("gender")Gender gender) {
+		 	this.id = id;
+	        this.name = name;
+			this.email = email;
+	        this.gender = gender;
+		
 	}
 	/**
 	 * @return the id
@@ -35,9 +44,7 @@ public class Student {
 	/**
 	 * @param id the id to set
 	 */
-//	public void setId(Long id) {
-//		this.id = id;
-//	}
+	
 	/**
 	 * @return the name
 	 */
@@ -47,9 +54,7 @@ public class Student {
 	/**
 	 * @param name the name to set
 	 */
-//	public void setName(String name) {
-//		this.name = name;
-//	}
+	
 
 	/**
 	 * @return the gender
@@ -60,9 +65,7 @@ public class Student {
 	/**
 	 * @param gender the gender to set
 	 */
-//	public void setGender(Gender gender) {
-//		this.gender = gender;
-//	}
+	
 	/**
 	 * @return the email
 	 */
@@ -72,10 +75,12 @@ public class Student {
 	/**
 	 * @param email the email to set
 	 */
-//	public void setEmail(String email) {
-//		this.email = email;
-//	}
-
+	
+	
+	    enum Gender {
+	        MALE, FEMALE
+	    }
+	
 }
 
 
